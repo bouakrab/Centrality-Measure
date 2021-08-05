@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>login_page</title>
+	
+	<!-- add icon link -->
+	<link rel="icon" href="/static/assets/images/AEB_free-file.png" type="image/icon type">
+	<!-- add icon link end -->
+
+
+
+    <!-- Additional CSS Files -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='assets/css/login.css') }}">
+
+    </head>
+	
+	
+	<body>
+		
+		<div id="title_login">
+			<p>complex networks analysis using measures of degree centrality, betweeness centrality and closness centrality</p>
+		</div>
+		
+		<div id="login-button">
+		  <img src="/static/assets/images/login-w-icon.png" onclick="switchVisible()"></img>
+		</div>
+		
+		<div id="container" class="container">
+		  <h1>Log In</h1>
+		  <span class="close-btn">
+			<img src="/static/assets/images/close_login.png" onclick="switchInvisible()"></img>
+		  </span>
+
+		  <form action="/" method="post">
+			<input type="text" name="nom" placeholder="Username"  name="post_login" required>
+			<input type="password" name="pass" placeholder="Password" pattern=".{4,}" title="4 characters minimum" required>
+			<input type="submit" name="log_in" value="Login" class="submit_button">
+			<input type="submit" value="sing in" onclick="show_log()" class="submit_button">
+			
+		  </form>
+		</div>
+		
+		<div id="show_log" class="container">
+		  <h1>sing In</h1>
+		  <span class="close-btn">
+			<img src="/static/assets/images/close_login.png" onclick="show_befor()"></img>
+		  </span>
+
+		  <form action="/" method="post">
+			<input type="text" name="nom2" placeholder="Username"  name="post_login" required>
+			<input type="text" name="pass2" placeholder="Password" pattern=".{4,}" title="4 characters minimum" required>
+			<input type="submit" name="sing_in" value="Save" class="Enregistrer">
+		  </form>
+		</div>
+		
+		<script src="static/assets/js/login.js"></script>
+		{% if(afficher) : %}
+			<script>
+					confirm("These data are already used, try to login.");
+			</script>
+		{% endif %}
+		
+	</body>
+</html>

@@ -1,0 +1,383 @@
+/* 
+---------------------------------------------
+global
+--------------------------------------------- 
+*/
+*{
+	font-family:sans-serif;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+body{
+	margin:0px;
+	
+}
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+
+
+.header-area {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  background-color: #234;
+  /*-webkit-transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;*/
+}
+
+.header-area .logo {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  /*-webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;*/
+}
+
+.header-area .title_nav .nav {
+  float:right;
+  width: 100%;
+  margin: 0;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;  
+  /*-webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;*/
+  list-style-type: none;
+  justify-content: center;
+  display: flex !important;
+}
+
+.header-area .title_nav .nav li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header-area .title_nav .nav li a {
+  display: block;
+  font-weight: 500;
+  font-size: 13px;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 40px;
+  line-height: 40px;
+  border: transparent;
+  letter-spacing: 1px;
+}
+
+.header-area .title_nav .nav li a {
+  color: #fff;
+}
+
+.header-area .title_nav .nav li:last-child a {
+  display: inline-block;
+  font-size: 13px;
+  padding: 11px 17px;
+  background-color: #229922;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  transition: all .3s;
+  height: auto;
+  line-height: 20px;
+}
+
+.header-area .title_nav .nav li:last-child a:hover {
+  background-color: #33bb33;
+  opacity: 1;
+}
+
+.header-area .title_nav .nav li:hover a{
+  color: #33bb33!important;
+  opacity: 1;
+}
+
+.header-area .title_nav .nav li a.activer {
+  color: #fff!important;
+  opacity: 1;
+}
+
+.header-area.header-sticky {
+  min-height: 80px;
+}
+
+.header-area.header-sticky .nav {
+  margin-top: 20px !important;
+}
+
+.header-area.header-sticky .nav li a.active {
+  color: #ed563b;
+}
+
+@media (max-width: 1000px) {
+	.header-area .main-nav .nav {
+		display:none !important;
+	}
+	.header-area .main-nav {
+		background-color:#234 !Important;
+	}
+}
+
+
+/* 
+---------------------------------------------
+banner
+--------------------------------------------- 
+*/
+
+.main-banner {
+  position: relative;
+}
+
+#bg-video {
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#bg-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-overplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+	right: 0;
+    bottom: 0;
+	text-align: center;
+	padding-top:20%;
+}
+
+.video-overplay .fichier_csv {
+	position: static;
+	color:white;
+	border: 1px solid #aaa;
+    border-radius: 5px;
+	padding:2px;
+	background-color: rgba(50,50,50,0.5);
+	font-size: 20px;
+}
+
+.video-overplay .upload {
+	position: static;
+	border: 2px solid #aaa;
+    border-radius: 5px;
+	padding:4px;
+	background-color: rgba(50,50,50,0.5);
+	font-size: 20px;
+	color: white;
+}
+
+.video-overplay .upload:hover {
+	background-color: rgba(10,10,10,0.5);
+
+}
+
+
+.video-overplay .sub_button {
+  position: static;
+  width:15%;    
+  background-color:  rgba(90,200,2,0.5);
+  color:white;
+  padding:20px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  box-shadow: 0px 0px 20px #999;
+  margin-top: 3%;
+  font-size: 20px;
+}
+
+.main-button .sub_button:hover {
+  background-color: rgba(90,200,2,0.6);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+
+/*
+---------------------------------------------
+features
+---------------------------------------------
+*/
+
+#features {
+  position: static;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #234;
+}
+
+
+
+/* 
+---------------------------------------------
+responsive
+--------------------------------------------- 
+*/
+
+
+@media (max-width: 1500px) {
+  #contact-us {
+    padding-left: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .main-banner .caption h2 {
+    font-size: 64px;
+  }
+  #features {
+    margin-bottom: 110px;
+  }
+  #features .feature-item {
+    margin-bottom: 30px;
+  }
+  #our-classes .tabs-content {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  .trainer-item {
+    margin-bottom: 30px;
+  }
+  #contact-us {
+    padding-left: 100px;
+	padding-right: 100px;
+  }
+  #contact-us #map {
+    margin-bottom: -7px;
+  }
+  #contact-us .contact-form {
+    padding: 30px;
+  }
+  #contact-us .contact-form #contact {
+    padding: 30px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .feature-item .right-content a.text-button {
+    margin-left: 130px;
+  }
+}
+
+/* style de la page graphe.html */
+
+body {
+  background-color: rgba(35,45,57,0.8);
+}
+
+.graphe {
+  padding-top: 10%;
+  position: static;
+}
+
+.graphe .matrice {
+  width:100%;
+  position: static;
+}
+
+.graphe .matrice tr, td, th {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  color:#aaa;
+  width:4%;
+}
+
+.graphe .matrice th {
+  color: #009900;
+}
+
+.graphe .matrice #check-4{
+  width: 120px;
+}
+
+.graphe .matrice .td_centrality_checkbox{
+  border: none;
+}
+
+.graphe .matrice .centrality_checkbox{
+  color: #ddd ;
+  width: 300px;
+  margin: auto;
+  margin-left: 100px;
+}
+
+.graphe .matrice .centrality_checkbox #valider {
+  background-color: #229022;
+  transition: all .3s;
+  color:white;
+  width:250px;
+  padding:10px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin-top:10%;
+}
+
+.graphe .matrice .centrality_checkbox #valider:hover {
+  background-color: #33bb33;
+}
+
+.graphe .image {
+  margin-top:5%;
+  position: static;
+  float:right;
+}
+
+.graphe img {
+  border:solid 2px #aaa;
+  border-radius:1%;
+  box-shadow: 0px 0px 30px #fff;
+  
+}
+
+.graphe .centrality_table {
+  margin-top:5%;
+  width: 50%;
+  position: static;
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

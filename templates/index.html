@@ -1,0 +1,67 @@
+{% extends 'basic.html' %}
+{% block title %}
+	graphe-centralité
+{% endblock %}
+{% block content %}
+	<body>
+    
+    
+		<!-- ***** Header Area Start ***** -->
+		<header class="header-area" id="nav">
+							<!-- ***** Logo Start ***** -->
+							<p class="logo">complex networks analysis using measures of degree centrality, betweenness centrality and closeness centrality</p>
+							<!-- ***** Logo End ***** -->
+						<div class="title_nav">
+							<nav>
+								<!-- ***** Menu Start ***** -->
+								<ul class="nav">
+									<li><a href="#features">About</a></li>
+									<li><a href="/" class="activer">LOGOUT</a></li> 
+								</ul>
+								<!-- ***** Menu End ***** -->
+							</nav>
+						</div>
+		</header>
+		<!-- ***** Header Area End ***** -->
+		
+
+		<!-- ***** Main button Area Start ***** -->
+		<div class="main-button" id="top">
+			<video autoplay muted loop id="bg-video">
+				<source src="/static/assets/images/gym-vide.mp4" type="video/mp4" />
+			</video>
+
+			<div class="video-overplay">
+					<form action="#" method="post" enctype="multipart/form-data">
+						  <input type="file" value="select csv" name="file" class="fichier_csv" accept=".csv" >
+						  <input type="submit" value="upload" name="upload" class="upload"><br>
+					  <input type="submit" value="start" class="sub_button" name="post_csv">
+					</form>
+
+			</div>
+		</div>
+		<!-- ***** Main Banner Area End ***** -->
+
+		<!-- ***** Features Item Start ***** -->
+		
+		<!-- ***** Features Item End ***** -->
+		
+		<div id="features">
+			<h1>Web application for critical nodes in a complex network</h1>
+			<p>Realized by :</p><p> ESSOUSY Hicham (essousy2000@gmail.com) and BOUAKRAB Mohammed (bouakrabmohammed@gmail.com)</p>
+			<p>Supervised by :</p><p> Pr.AGOUTI Tarik (agoutitarik@gmail.com)</p>
+
+		</div>
+		{% if (message=='1') : %}
+			<script>
+					confirm("Saved successfully.");
+			</script>
+		{% elif (message=='2') : %}
+			<script>
+					confirm("The file is uploaded successfully.");
+			</script>
+		{% endif %}
+		
+	</body>
+
+{% endblock %}
